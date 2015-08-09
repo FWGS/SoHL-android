@@ -17,6 +17,10 @@ gen/
 build/
 /*/build/
 
+# Native files
+obj/
+libs/
+
 # Local configuration file (sdk path, etc)
 local.properties
 
