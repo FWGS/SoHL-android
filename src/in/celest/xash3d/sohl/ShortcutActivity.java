@@ -29,6 +29,7 @@ public class ShortcutActivity extends Activity
 		if(argv.length() != 0) intent.putExtra("argv",argv.getText().toString());
 		EditText gamedir = (EditText)findViewById(R.id.shortcut_gamedir);
 		if(gamedir.length() != 0) intent.putExtra("gamedir",gamedir.getText().toString());
+		intent.putExtra("gamelibdir", getFilesDir().getAbsolutePath().replace("/files","/lib"));
 		Intent wrapIntent = new Intent();
 		wrapIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, intent);
 		wrapIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, name.getText().toString());

@@ -42,6 +42,9 @@ public class LauncherActivity extends Activity {
 		editor.putString("gamedir", gameDir.getText().toString());
 		editor.commit();
 		editor.apply();
+		if(cmdArgs.length() != 0) intent.putExtra("argv",cmdArgs.getText().toString());
+		if(gameDir.length() != 0) intent.putExtra("gamedir",gameDir.getText().toString());
+		intent.putExtra("gamelibdir", getFilesDir().getAbsolutePath().replace("/files","/lib"));
 		startActivity(intent);
     }
 
