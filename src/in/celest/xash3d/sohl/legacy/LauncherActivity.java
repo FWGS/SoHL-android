@@ -1,4 +1,4 @@
-package in.celest.xash3d.sohl;
+package in.celest.xash3d.sohl.legacy;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 
-import in.celest.xash3d.sohl.R;
+import in.celest.xash3d.sohl.legacy.R;
 
 public class LauncherActivity extends Activity {
 	// public final static String ARGV = "in.celest.xash3d.MESSAGE";

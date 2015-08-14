@@ -7,7 +7,7 @@ mkdir gen
 mkdir bin
 mkdir bin/classes
 $AAPT package -m -J gen/ -M AndroidManifest.xml -S res -I $ANDROID_JAR
-$JAVA_HOME/bin/javac -d bin/classes -s bin/classes -cp $ANDROID_JAR gen/in/celest/xash3d/*/*.java src/in/celest/xash3d/*/*.java
+$JAVA_HOME/bin/javac -d bin/classes -s bin/classes -cp $ANDROID_JAR gen/in/celest/xash3d/*/*/*.java src/in/celest/xash3d/*/*/*.java
 $DX --dex --output=bin/classes.dex bin/classes/
 /mnt/app/apktool/aapt package -f -M AndroidManifest.xml -S res -I $ANDROID_JAR -F bin/$NAME.apk.unaligned
 $APKBUILDER bin/$NAME.apk -u -nf libs/ -rj libs -f bin/classes.dex -z bin/$NAME.apk.unaligned

@@ -1,11 +1,11 @@
-package in.celest.xash3d.sohl;
+package in.celest.xash3d.sohl.legacy;
 
 import android.app.Activity;
 import android.view.View;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import in.celest.xash3d.sohl.R;
+import in.celest.xash3d.sohl.legacy.R;
 import android.widget.EditText;
 
 import android.os.*;
