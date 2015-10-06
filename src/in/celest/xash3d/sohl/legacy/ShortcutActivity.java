@@ -33,10 +33,11 @@ public class ShortcutActivity extends Activity
 		Intent wrapIntent = new Intent();
 		wrapIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, intent);
 		wrapIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, name.getText().toString());
-		//Bitmap icon = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
+		Bitmap icon = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
 		/// TODO: Load icon from path+gamedir+"game.ico"
-		//int size = (int) getResources().getDimension(android.R.dimen.app_icon_size);
-		//wrapIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON, Bitmap.createScaledBitmap(icon, size, size, false));
+		// path is unknown, no way to get it now!
+		int size = (int) getResources().getDimension(android.R.dimen.app_icon_size);
+		wrapIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON, Bitmap.createScaledBitmap(icon, size, size, false));
 		setResult(RESULT_OK, wrapIntent);
 		finish();
 	}
